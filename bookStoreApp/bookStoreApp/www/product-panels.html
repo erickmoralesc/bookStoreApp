@@ -1,0 +1,56 @@
+<section>
+	<div>
+	
+	<div class="pull-rigth">
+	<strong> Buscar </strong>Título
+	<input type="text" name=""><input type="submit" class="btn" value="Buscar" class="form-control">
+	<h3 class="">Ordenar por:</h3><ul class="nav nav-pills " >
+		<li ng-class="{active:panel.isSelected(1)}"><a href="" ng-click="panel.selectTab(1)">Autor</a></li>
+		<li ng-class="{active:panel.isSelected(2)}"><a href="" ng-click="panel.selectTab(2)">Editorial</a></li>
+	</ul>
+	<br>
+	<br>
+<br>
+	</div>
+	</div>
+	<div class="panel" ng-show="panel.isSelected(1)">
+		<div class="list-group">
+			<div class="list-group-item row"  ng-repeat="product in store.products | orderBy: 'autor'">
+				<div class="">
+					<div class=" col-md-2 pull-left thumbnail small-image">
+							<img ng-src="{{product.img}}" class="image-responsive">
+					</div>
+					
+					<div class="col-md-9">
+						<h3>{{product.titulo}}</h3>
+						<h4>{{product.editorial}}</h4>
+						<p  class="text-justify">{{product.descripcion}}</p>
+					</div>
+				</div>
+				
+			</div>
+		
+		</div>
+	</div>
+	<div class="panel" ng-show="panel.isSelected(2)">
+		<div class="list-group">
+			<div class="list-group-item row"  ng-repeat="product in store.products | orderBy: 'editorial'">
+				<div class="">
+					<div class=" col-md-2 pull-left thumbnail small-image">
+							<img ng-src="{{product.img}}" class="image-responsive">
+
+					</div>
+					
+					<div class="col-md-9">
+						<h3>{{product.titulo}}</h3>
+						<h4>{{product.editorial}}</h4>
+						<p class="text-justify">{{product.descripcion}}</p>
+					</div>
+				</div>
+				
+			</div>
+		
+		</div>
+	</div>
+	
+</section>

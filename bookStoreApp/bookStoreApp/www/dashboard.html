@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="dashBoard">
+<head>
+	<meta charset="utf-8">	
+	<title>UAZON tienda online</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<style type="text/css">	
+	.verticalLine {
+    border-left: thick solid gray;
+    height: 100%;
+	}
+	footer {
+ 	 position: absolute;
+ 	 bottom: 0;
+ 	 width: 100%;
+ 	 /* Set the fixed height of the footer here */
+  	height: 60px;
+  	background-color: #f5f5f5;
+	}
+	</style>
+
+</head>
+<body>
+	<header class="page-header text-center">
+		<h2>Cabecera UAZON tienda online</h2>
+	</header>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-2">
+				<div class="container-fluid pull-left">
+					<ul class="nav nav-pills nav-stacked row divide">
+ 		 				<li class="active"><a href="#">Home</a></li>
+ 		 				<li><a href="#">Mis Pedidos</a></li>
+ 		 				<li><a href="#">Mis Favoritos</a></li>
+ 				 		<li><a href="#">Mis Datos</a></li>
+ 				 		<li><a href="#">>Salir</a></li>
+					</ul>
+				</div>
+			</div> 
+			<div class="col-sm-9 verticalLine pull-left ">
+				<div class="">
+					<section>
+					
+								<h3>Bienvenido a UAZON</h3>
+								<h4>Consulta tus datos, tus pedidos y tus productos favoritos</h4>
+							
+					</section>	
+					<div class="row center-block">
+								<div class="col-sm-4 text-center">
+									<img ng-src="img/truck.png" class="">
+									<h4 class="text-center">Pedidos</h4>
+								</div>
+								<div class="col-sm-4 text-center">
+									<img ng-src="img/star-256.png" class="">
+									<h4 class="text-center">   Favoritos</h4>	
+								</div>
+								<div class="col-sm-3 text-center">	
+									<img ng-src="img/pencil.png" class="">
+									<h4 class="text-right">Mis Datos</h4>
+								</div>
+				</div> 
+				</div>
+
+				
+				
+			</div>
+
+
+		</div>
+	
+	</div>
+	
+	<footer>
+      <div class="container">
+        <p class="text-muted text-center"><em>Pie UAZON tienda Online</em></p>
+      </div>
+    </footer>
+	
+
+
+	<script src="js/angular.min.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/products.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

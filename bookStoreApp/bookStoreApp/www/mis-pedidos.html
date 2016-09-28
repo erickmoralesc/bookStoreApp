@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="store">
+<head>
+	<meta charset="utf-8">	
+	<title>Pedidos</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<style type="text/css">	
+	.verticalLine {
+    border-left: thick solid gray;
+    height: 100%;
+	}
+	footer {
+ 	 position: absolute;
+ 	 bottom: 0;
+ 	 width: 100%;
+ 	 /* Set the fixed height of the footer here */
+  	height: 60px;
+  	background-color: #f5f5f5;
+	}
+	</style>
+
+</head>
+<body>
+	<header class="page-header text-center">
+		<h2>Cabecera UAZON tienda online</h2>
+	</header>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-2">
+				<div class="container-fluid pull-left">
+					<ul class="nav nav-pills nav-stacked row divide">
+ 		 				<li class="active"><a href="#">Home</a></li>
+ 		 				<li><a href="#">Mis Pedidos</a></li>
+ 		 				<li><a href="#">Mis Favoritos</a></li>
+ 				 		<li><a href="#">Mis Datos</a></li>
+ 				 		<li><a href="#">>Salir</a></li>
+					</ul>
+				</div>
+			</div> 
+					<div class="col-sm-9 verticalLine pull-left ">
+						<table class="table table-striped">
+								<tr>
+									<th>Número</th>
+									<th>Fecha</th>
+									<th>Resumen</th>
+									<th>Estado</th>
+									<th>Total</th>
+								</tr>
+						</table>
+								
+						<div ng-controller="PedidosController as pedidos "  >
+							<div ng-repeat="product in pedidos.products ">
+								<table class="table table-striped text-center">
+								
+								<tr>
+									<th class="text-center">{{product.id}}</th>
+									<th class="text-center">{{product.fecha}}</th>
+									<th class="text-center">{{product.resumen}}</th>
+									<th class="text-center">{{product.estado}}</th>
+									<th class="text-center">{{product.total}}</th>
+								</tr>
+								</div>
+								</table>
+						</div>	
+					</div>							
+						
+				
+
+
+
+
+	
+				
+
+
+
+
+
+
+
+
+				</div>
+
+		</div>
+	
+	</div>
+	
+	<footer>
+      <div class="container">
+        <p class="text-muted text-center"><em>Pie UAZON tienda Online</em></p>
+      </div>
+    </footer>
+	
+
+
+	<script src="js/angular.min.js"></script>
+	<script src="js/JSON.js"></script>
+	<script src="js/products.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
